@@ -1,0 +1,67 @@
+[1;31m
+Start test 1[0m
+Server started!
+Client started!
+Sent: {"type":"exit"}
+Received: {"response":"OK"}
+[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+Server started!
+Client started!
+7Sent: {"type":"set","value":"Hello world!","key":"1"}
+Received: {"response":"OK"}
+mTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\setFile.json
+¦File content: {"type":"set","key":"person","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}}
+
+Set requestType to set
+Set key to "person"
+Set value to {"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"87"}}
+Client started!
+¼Sent: {"type":"set","value":"{\"name\":\"Elon Musk\",\"car\":{\"model\":\"Tesla Roadster\",\"year\":\"2018\"},\"rocket\":{\"name\":\"Falcon 9\",\"launches\":\"87\"}}","key":"\"person\""}
+Received: {"response":"OK"}
+mTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\getFile.json
+6File content: {"type":"get","key":["person","name"]}
+
+Set requestType to get
+Set key to ["person","name"]
+Client started!
+4Sent: {"type":"get","key":"[\"person\",\"name\"]"}
+1Received: {"response":"OK","value":"Elon Musk"}
+pTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\updateFile.json
+PFile content: {"type":"set","key":["person","rocket","launches"],"value":"88"}
+
+Set requestType to set
++Set key to ["person","rocket","launches"]
+Set value to "88"
+Client started!
+TSent: {"type":"set","value":"\"88\"","key":"[\"person\",\"rocket\",\"launches\"]"}
+Received: {"response":"OK"}
+sTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\secondGetFile.json
+/File content: {"type":"get","key":["person"]}
+
+Set requestType to get
+Set key to ["person"]
+Client started!
++Sent: {"type":"get","key":"[\"person\"]"}
+–Received: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster","year":"2018"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+pTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\deleteFile.json
+?File content: {"type":"delete","key":["person","car","year"]}
+
+Set requestType to delete
+$Set key to ["person","car","year"]
+Client started!
+?Sent: {"type":"delete","key":"[\"person\",\"car\",\"year\"]"}
+Received: {"response":"OK"}
+sTry to open file: C:\Users\tisch\IdeaProjects\JSON Database\JSON Database\task\src\client\data\secondGetFile.json
+/File content: {"type":"get","key":["person"]}
+
+Set requestType to get
+Set key to ["person"]
+Client started!
++Sent: {"type":"get","key":"[\"person\"]"}
+ˆReceived: {"response":"OK","value":{"name":"Elon Musk","car":{"model":"Tesla Roadster"},"rocket":{"name":"Falcon 9","launches":"88"}}}
+Client started!
+Sent: {"type":"exit"}
+Received: {"response":"OK"}
